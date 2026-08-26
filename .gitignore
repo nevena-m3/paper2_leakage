@@ -1,0 +1,44 @@
+﻿# Python / Jupyter
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.ipynb_checkpoints/
+.venv/
+venv/
+.env
+
+# IDE / OS
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+
+# Local participant-level data: NEVER COMMIT
+data/raw/**
+data/interim/**
+data/processed/**
+!data/raw/.gitkeep
+!data/interim/.gitkeep
+!data/processed/.gitkeep
+
+# Generated outputs are private by default.
+# Safe aggregate artifacts can be explicitly force-added later after review.
+outputs/**
+!outputs/goal1/.gitkeep
+!outputs/goal2/.gitkeep
+!outputs/goal3/.gitkeep
+!outputs/final/.gitkeep
+
+# Audio/video should never enter this repository
+*.wav
+*.flac
+*.mp3
+*.m4a
+*.mp4
+*.mov
+*.avi
+
+# Local logs/temp
+*.log
+tmp/
+temp/

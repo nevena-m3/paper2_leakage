@@ -1,0 +1,56 @@
+﻿analysis:
+  name: paper2_leakage
+  specification_version: "1.0"
+  base_seed: 20260825
+
+expected_canonical_counts:
+  pre_adjudication_recordings: 573
+  retained_recordings: 519
+  retained_participants: 224
+  als_participants: 158
+  control_participants: 66
+  als_recordings: 418
+  control_recordings: 101
+
+clinical_matching:
+  bulbar_primary_days: 60
+  bulbar_sensitivity_days: 90
+
+validation:
+  independent_unit: participant
+  outer_folds: 5
+  outer_repeats: 10
+  inner_folds: 5
+  diagnosis_stratified: true
+
+tuning:
+  diagnosis_metric: log_loss
+  severity_metric: mae
+  logistic_C:
+    - 0.0001
+    - 0.001
+    - 0.01
+    - 0.1
+    - 1.0
+    - 10.0
+    - 100.0
+    - 1000.0
+    - 10000.0
+  ridge_alpha:
+    - 0.0001
+    - 0.001
+    - 0.01
+    - 0.1
+    - 1.0
+    - 10.0
+    - 100.0
+    - 1000.0
+    - 10000.0
+
+uncertainty:
+  participant_bootstrap_replicates: 2000
+  goal1_permutation_replicates: 1000
+
+primary_models:
+  diagnosis: l2_logistic_regression
+  severity: l2_ridge_regression
