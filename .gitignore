@@ -42,3 +42,14 @@ outputs/**
 *.log
 tmp/
 temp/
+
+# Pinned external Paper 1 dependency
+external/
+
+# Paper 2 local/private analysis material
+.venv_goal3/
+data/*.zip
+data/**/*.zip
+data/manifests/
+old notebooks/
+vendor/
