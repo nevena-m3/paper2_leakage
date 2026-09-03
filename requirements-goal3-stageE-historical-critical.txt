@@ -1,0 +1,6 @@
+# Exact critical Python package versions recorded by the frozen Goal-3 Stage-E
+# runtime audit. This is NOT a complete historical pip-freeze lockfile.
+silero-vad==6.2.1
+onnxruntime==1.29.0
+gammatone==1.0.3
+torch==2.13.0
